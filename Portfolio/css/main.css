@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+.letter {
+    display: inline-flex;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.letter2 {
+    display: inline-flex;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.container-letter {
+    cursor: default;
+    text-align: center;
+}
+
+.space-letter {
+    margin-inline: 4px;
+}
+
+.welcome {
+    display: inline-flex;
+    font-size: 90px;
+    font-weight: bold;
+    color: violet;
+}
+
+html {
+  scrollbar-width: none;
+}

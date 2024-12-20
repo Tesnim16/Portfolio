@@ -1,0 +1,7 @@
+#barre {
+    height: 7.5px;
+    position: fixed;
+    bottom: 0;
+    background: linear-gradient(to right, darkviolet, purple);
+    border-radius: 0px 10px 10px 0px;
+}

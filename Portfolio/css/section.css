@@ -1,0 +1,28 @@
+.section1 {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  text-align: center;
+  width: 100%;
+  border-radius: 25px;
+  cursor: default;
+  transition: color 0.2s ease-in-out;
+  position:absolute;
+  margin-top: 450px;
+}
+
+.section1:hover {
+  color: cornflowerblue;
+}
+
+.section2 {
+height: 300vh;
+padding-top: 175vh;
+width: 100%;
+}
+
+.section3 {
+  height: 300vh;
+  margin-top: 475vh;
+}

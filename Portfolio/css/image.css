@@ -1,0 +1,26 @@
+/* Conteneur de l'image */
+.image-container {
+    position: relative; /* Nécessaire pour positionner le texte en absolu */
+    width: 100%;
+    max-width: 1000px; /* Largeur maximale de l'image */
+    margin: 0 auto; /* Centrer le conteneur */
+}
+
+/* Image de fond */
+.background-image {
+    width: 100%; /* L'image prend toute la largeur du conteneur */
+    height: auto; /* Conserve les proportions */
+    display: block;
+    border-radius: 15px;
+}
+
+/* Texte par-dessus l'image */
+.text-overlay {
+    position: absolute; /* Permet de placer le texte par-dessus */
+    top: 50%; /* Position verticale au centre */
+    left: 50%; /* Position horizontale au centre */
+    transform: translate(-50%, -50%); /* Centre parfaitement le texte */
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 25px;
+}
