@@ -19,10 +19,17 @@
 .section2 {
 height: 300vh;
 padding-top: 175vh;
-width: 100%;
 }
 
 .section3 {
   height: 300vh;
   margin-top: 475vh;
+}
+
+.parcours {
+  margin-top: 75vh;
+}
+
+.black {
+  background-color: #111;
 }

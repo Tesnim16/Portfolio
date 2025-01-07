@@ -21,12 +21,14 @@
     display: inline-flex;
     font-size: 40px;
     font-weight: bolder;
+    color: lightgray;
 }
 
 .letter2 {
     display: inline-flex;
-    font-size: 40px;
+    font-size: 15px;
     font-weight: bolder;
+    color: rgb(127, 182, 255);
 }
 
 .container-letter {
@@ -42,9 +44,37 @@
     display: inline-flex;
     font-size: 90px;
     font-weight: bold;
-    color: violet;
+    color: lightseagreen;
 }
 
 html {
   scrollbar-width: none;
+}
+
+.text-a-propos {
+  display: grid;
+  text-align: center;
+  align-items: center;
+  color: lightgray;
+  font-size: 20px;
+  margin-top: 20px;
+  scale: 90%;
+  height: 125px;
+  border: rgb(94, 94, 94, 0.1) solid 1px;
+  transition: all 1s ease-in-out;
+}
+
+.text-a-propos:hover {
+  background-color: rgb(64, 47, 47);
+  display: grid;
+  border-radius: 15px;
+  transform: scale(105%) translateY(10px);
+  border: rgb(94, 94, 94) solid 3px ;
+}
+
+.letter3 {
+  display: inline-flex;
+  font-size: 40px;
+  font-weight: bolder;
+  color: #333;
 }
