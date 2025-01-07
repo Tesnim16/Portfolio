@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTS SIO - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #dedede;
+      color: black;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .loader-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      background: url('/photos/loader.gif') no-repeat center center;
+      background-size: contain;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0;
+      background: rgb(102, 76, 76);
+      transition: width 0.1s linear;
+    }
+
+    .loading-text {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .complete-symbol {
+      display: none;
+      font-size: 50px;
+      margin-top: 20px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .logo-zoom {
+      animation: zoom 3s forwards;
+    }
+
+    @keyframes zoom {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(2);
+      }
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 25px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .text-content {
+        display: grid;
+        border: #fff solid 2px;
+        background-color: rgb(64, 47, 47);
+        border-radius: 10px;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .text-content:hover {
+        background-color: #666;
+    }
+
+    .text {
+        margin-top: 25px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="loading-screen" class="loader-container">
+    <div id="logo" class="logo"></div>
+    <p id="loading-percentage" class="loading-text">0%</p>
+    <div class="progress-bar">
+      <div id="progress-bar-fill" class="progress-bar-fill"></div>
+    </div>
+    <div id="complete-symbol" class="complete-symbol">✔️</div>
+  </div>
+
+  <div id="content" style="display: none;">
+    <h1>Vous avez terminé le téléchargement de la page !</h1>
+    <div class="text-content">
+    <a class="text" href="/index.html">Veuillez cliquer ici pour être redirigé vers la page principale</a>
+    </div>
+  </div>
+
+  <script>
+    let percentage = 0;
+    const loadingText = document.getElementById("loading-percentage");
+    const progressBarFill = document.getElementById("progress-bar-fill");
+    const logo = document.getElementById("logo");
+
+    function updateLoading() {
+      if (percentage < 100) {
+        percentage++;
+        loadingText.textContent = percentage + "%";
+        progressBarFill.style.width = percentage + "%";
+      } else {
+        clearInterval(loadingInterval);
+        logo.classList.add("logo-zoom");
+        setTimeout(() => {
+          document.getElementById("loading-screen").style.display = "none";
+          document.getElementById("content").style.display = "block";
+        }, 3000);
+      }
+    }
+
+    const loadingInterval = setInterval(updateLoading, 50);
+  </script>
+</body>
+</html>
