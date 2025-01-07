@@ -1,380 +1,161 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BTS SIO - Portfolio</title>
-    <link rel="stylesheet" href="/css/barre.css" />
-    <link rel="stylesheet" href="/css/image.css" />
-    <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/menu.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/parcours.css" />
-    <link rel="stylesheet" href="/css/scroll-color.css" />
-    <link rel="stylesheet" href="/css/section.css" />
-    <link rel="stylesheet" href="/css/text-animation.css" />
-    <script src="/js/barre.js"></script>
-    <link rel="icon" type="image/png" href="" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTS SIO - Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #dedede;
+      color: black;
+      font-family: 'Arial', sans-serif;
+    }
 
-  <body>
-    <div id="barre"></div>
+    .loader-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      max-width: 400px;
+    }
 
-    <!-- Menu déroulant -->
-    <div class="menu-container">
-      <button class="menu-button">Menu</button>
-      <ul class="menu-list">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#a-propos">À propos</a></li>
-        <li><a href="#parcours">Parcours</a></li>
-        <li><a href="#competences">Compétences</a></li>
-        <li><a href="#projets">Projets</a></li>
-        <li><a href="#veille">Veille</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#e4">Épreuve E4</a></li>
-        <p class="copyright">
-          © 2024 - BENAMA Tesnim. <br />
-          Tous droits réservés.
-        </p>
-      </ul>
+    .logo {
+      width: 100px;
+      height: 100px;
+      background: url('/photos/loader.gif') no-repeat center center;
+      background-size: contain;
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0;
+      background: rgb(102, 76, 76);
+      transition: width 0.1s linear;
+    }
+
+    .loading-text {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .complete-symbol {
+      display: none;
+      font-size: 50px;
+      margin-top: 20px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .logo-zoom {
+      animation: zoom 3s forwards;
+    }
+
+    @keyframes zoom {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(2);
+      }
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 25px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .text-content {
+        display: grid;
+        border: #fff solid 2px;
+        background-color: rgb(64, 47, 47);
+        border-radius: 10px;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .text-content:hover {
+        background-color: #666;
+    }
+
+    .text {
+        margin-top: 25px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="loading-screen" class="loader-container">
+    <div id="logo" class="logo"></div>
+    <p id="loading-percentage" class="loading-text">0%</p>
+    <div class="progress-bar">
+      <div id="progress-bar-fill" class="progress-bar-fill"></div>
     </div>
-    <div class="name">
-      <span>
-        <p>BENAMA TESNIM</p>
-      </span>
-    </div>
-    <section class="section1">
-      <div class="image-container">
-        <img src="/photos/Fond.jpg" alt="Fond" class="background-image" />
-      </div>
-      <div class="text-overlay">
-        <p>
-          BENAMA <br />
-          TESNIM
-        </p>
-      </div>
-    </section>
-    <section class="section2">
-      <div class="text-container" id="accueil">
-        <div class="welcome-text">
-          <div class="welcome" data-aos="fade-down" data-aos-duration="500">
-            B
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="600">
-            I
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="700">
-            E
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="800">
-            N
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="900">
-            V
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="1000">
-            E
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="1100">
-            N
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="1200">
-            U
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="1300">
-            E
-          </div>
-          <br />
-          <div class="welcome" data-aos="fade-down" data-aos-duration="500">
-            S
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="600">
-            U
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="700">
-            R
-          </div>
-          <br />
-          <div class="welcome" data-aos="fade-down" data-aos-duration="500">
-            M
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="600">
-            O
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="700">
-            N
-          </div>
-          <br />
-          <div class="welcome" data-aos="fade-down" data-aos-duration="500">
-            P
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="600">
-            O
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="700">
-            R
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="800">
-            T
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="900">
-            F
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="1000">
-            O
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="1100">
-            L
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="1200">
-            I
-          </div>
-          <div class="welcome" data-aos="fade-down" data-aos-duration="1300">
-            O
-          </div>
-        </div>
-      </div>
-      <section id="a-propos">
-        <div class="container-propos">
-          <div class="container-letter">
-            <div class="letter-text">
-              <div class="letter" data-aos="fade-down" data-aos-duration="1000">
-                A
-              </div>
-              <span class="space-letter"></span>
-              <div class="letter" data-aos="fade-down" data-aos-duration="1100">
-                P
-              </div>
-              <div class="letter" data-aos="fade-down" data-aos-duration="1200">
-                R
-              </div>
-              <div class="letter" data-aos="fade-down" data-aos-duration="1300">
-                O
-              </div>
-              <div class="letter" data-aos="fade-down" data-aos-duration="1400">
-                P
-              </div>
-              <div class="letter" data-aos="fade-down" data-aos-duration="1500">
-                O
-              </div>
-              <div class="letter" data-aos="fade-down" data-aos-duration="1600">
-                S
-              </div>
-              <span class="space-letter"></span>
-              <div class="letter" data-aos="fade-down" data-aos-duration="1700">
-                D
-              </div>
-              <div class="letter" data-aos="fade-down" data-aos-duration="1800">
-                E
-              </div>
-              <br />
-              <div class="letter" data-aos="fade-down" data-aos-duration="1900">
-                M
-              </div>
-              <div class="letter" data-aos="fade-down" data-aos-duration="2000">
-                O
-              </div>
-              <div class="letter" data-aos="fade-down" data-aos-duration="2100">
-                I
-              </div>
-            </div>
-            <br />
-            <div data-aos="fade-down" data-aos-duration="50" class="letter2">
-              E
-            </div>
-            <div data-aos="fade-down" data-aos-duration="100" class="letter2">
-              T
-            </div>
-            <div data-aos="fade-down" data-aos-duration="150" class="letter2">
-              U
-            </div>
-            <div data-aos="fade-down" data-aos-duration="200" class="letter2">
-              D
-            </div>
-            <div data-aos="fade-down" data-aos-duration="250" class="letter2">
-              I
-            </div>
-            <div data-aos="fade-down" data-aos-duration="300" class="letter2">
-              A
-            </div>
-            <div data-aos="fade-down" data-aos-duration="350" class="letter2">
-              N
-            </div>
-            <div data-aos="fade-down" data-aos-duration="400" class="letter2">
-              T
-            </div>
-            <span class="space-letter"></span>
-            <div data-aos="fade-down" data-aos-duration="450" class="letter2">
-              1
-            </div>
-            <div data-aos="fade-down" data-aos-duration="500" class="letter2">
-              <p><sup>E</sup></p>
-            </div>
-            <div data-aos="fade-down" data-aos-duration="550" class="letter2">
-              <p><sup>R</sup></p>
-            </div>
-            <div data-aos="fade-down" data-aos-duration="600" class="letter2">
-              <p><sup>E</sup></p>
-            </div>
-            <span class="space-letter"></span>
-            <div data-aos="fade-down" data-aos-duration="650" class="letter2">
-              A
-            </div>
-            <div data-aos="fade-down" data-aos-duration="700" class="letter2">
-              N
-            </div>
-            <div data-aos="fade-down" data-aos-duration="750" class="letter2">
-              N
-            </div>
-            <div data-aos="fade-down" data-aos-duration="800" class="letter2">
-              E
-            </div>
-            <div data-aos="fade-down" data-aos-duration="850" class="letter2">
-              E
-            </div>
-            <br />
-            <div data-aos="fade-down" data-aos-duration="900" class="letter2">
-              B
-            </div>
-            <div data-aos="fade-down" data-aos-duration="950" class="letter2">
-              T
-            </div>
-            <div data-aos="fade-down" data-aos-duration="1000" class="letter2">
-              S
-            </div>
-            <span class="space-letter"></span>
-            <div data-aos="fade-down" data-aos-duration="1050" class="letter2">
-              S
-            </div>
-            <div data-aos="fade-down" data-aos-duration="1100" class="letter2">
-              I
-            </div>
-            <div data-aos="fade-down" data-aos-duration="1150" class="letter2">
-              O
-            </div>
-            <span class="space-letter"></span>
-            <div data-aos="fade-down" data-aos-duration="1200" class="letter2">
-              O
-            </div>
-            <div data-aos="fade-down" data-aos-duration="1250" class="letter2">
-              P
-            </div>
-            <div data-aos="fade-down" data-aos-duration="1300" class="letter2">
-              T
-            </div>
-            <div data-aos="fade-down" data-aos-duration="1350" class="letter2">
-              I
-            </div>
-            <div data-aos="fade-down" data-aos-duration="1400" class="letter2">
-              O
-            </div>
-            <div data-aos="fade-down" data-aos-duration="1450" class="letter2">
-              N
-            </div>
-            <span class="space-letter"></span>
-            <div data-aos="fade-down" data-aos-duration="1500" class="letter2">
-              S
-            </div>
-            <div data-aos="fade-down" data-aos-duration="1550" class="letter2">
-              L
-            </div>
-            <div data-aos="fade-down" data-aos-duration="1600" class="letter2">
-              A
-            </div>
-            <div data-aos="fade-down" data-aos-duration="1650" class="letter2">
-              M
-            </div>
-          </div>
-        </div>
-        <div class="text-a-propos">
-          <p data-aos="fade-up" data-aos-duration="2500">
-            Moi c'est Tesnim BENAMA. <br />
-            Actuellement en première année de BTS SIO (Services Informatiques
-            aux Organisations) option SLAM (Solution Logicielles et Application
-            Métier) à l'institut Limayrac situé à Toulouse. L'option SLAM est
-            une option dédié au développement, que ça soit du développement web
-            comme du développement logiciel.
-          </p>
-        </div>
-      </section>
-      <div class="parcours" id="parcours">
-        <div class="container-letter">
-          <div class="letter3" data-aos="fade-down" data-aos-duration="100">
-            P
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="200">
-            A
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="300">
-            R
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="400">
-            C
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="500">
-            O
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="600">
-            U
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="700">
-            R
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="800">
-            S
-          </div>
-          <span class="space-letter"></span>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="900">
-            S
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="1000">
-            C
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="1100">
-            O
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="1200">
-            L
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="1300">
-            A
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="1400">
-            I
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="1500">
-            R
-          </div>
-          <div class="letter3" data-aos="fade-down" data-aos-duration="1600">
-            E
-          </div>
-        </div>
-        <div class="timeline">
-          <div class="timeline-item left">
-              <div class="timeline-dot"></div>
-              <h3>2015 - 2019</h3>
-              <p>Collège - Collège Jean Jaurès</p>
-        </div>
-          <div class="timeline-item right">
-            <div class="timeline-dot"></div>
-            <h3>2020 - 2024</h3>
-            <p>Baccalauréat ST2S - Lycée Rive Gauche</p>
-          </div>
-          <div class="timeline-item left">
-            <div class="timeline-dot"></div>
+    <div id="complete-symbol" class="complete-symbol">✔️</div>
+  </div>
 
-            <h3>2024 - 2026</h3>
-            <p>BTS SIO - Institut Limayrac</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <script src="/js/main.js"></script>
-    <script src="/js/app.js"></script>
-    <script src="/js/scroll-color.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+  <div id="content" style="display: none;">
+    <h1>Vous avez terminé le téléchargement de la page !</h1>
+    <div class="text-content">
+    <a class="text" href="/index.html">Veuillez cliquer ici pour être redirigé vers la page principale</a>
+    </div>
+  </div>
+
+  <script>
+    let percentage = 0;
+    const loadingText = document.getElementById("loading-percentage");
+    const progressBarFill = document.getElementById("progress-bar-fill");
+    const logo = document.getElementById("logo");
+
+    function updateLoading() {
+      if (percentage < 100) {
+        percentage++;
+        loadingText.textContent = percentage + "%";
+        progressBarFill.style.width = percentage + "%";
+      } else {
+        clearInterval(loadingInterval);
+        logo.classList.add("logo-zoom");
+        setTimeout(() => {
+          document.getElementById("loading-screen").style.display = "none";
+          document.getElementById("content").style.display = "block";
+        }, 3000);
+      }
+    }
+
+    const loadingInterval = setInterval(updateLoading, 50);
+  </script>
+</body>
 </html>
