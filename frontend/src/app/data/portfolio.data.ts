@@ -8,7 +8,7 @@ export const ownerName = 'BENAMA Tesnim';
 export const navItems: NavItem[] = [
   { label: 'Accueil', path: '/' },
   { label: 'Présentation', path: '/presentation' },
-  { label: 'Situations professionnelles', path: '/projet' },
+  { label: 'Expériences professionnelles', path: '/projet' },
   { label: 'Tableau de synthèse', path: '/e5' },
   { label: 'Mes compétences', path: '/competences' },
   { label: 'Ma veille', path: '/veille' },
@@ -38,7 +38,7 @@ export const homeData = {
 
 export const presentationData = {
   title: 'Présentation',
-  subtitle: 'A propos de moi (Parcours scolaire)',
+  subtitle: 'A propos de moi (Parcours scolaire et professionnel)',
   timeline: [
     { years: '2024 - 2026', text: 'BTS SIO - Institut Limayrac', side: 'left' as const },
     { years: '2020 - 2024', text: 'Baccalauréat ST2S - Lycée Rive Gauche', side: 'right' as const },
@@ -58,8 +58,8 @@ export const presentationData = {
 };
 
 export const projectsData = {
-  title: 'Mes Projets',
-  subtitle: 'Découvrez mes projets réalisés dans le cadre de ma formation.',
+  title: 'Expériences professionnelles',
+  subtitle: 'Découvrez mes expériences professionnelles.',
   cards: [
     {
       title: 'Site APPFAQ',

@@ -3,7 +3,7 @@
 }
 
 :root {
-  --bg-main: #000000;
+  --bg-main: #020617;
   --panel-bg: #0b1018;
   --panel-border: rgba(148, 163, 184, 0.26);
   --brand: #38bdf8;
@@ -467,6 +467,21 @@ p {
   font-size: 0.95rem;
 }
 
+.contact-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--brand);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--brand-dark);
+  text-decoration: underline;
+}
+
 .contact-form {
   width: 100%;
   max-width: 550px;
@@ -629,6 +644,24 @@ p {
   color: #fca5a5;
 }
 
+.contact-link {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 0;
+  text-decoration: none;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.contact-link:hover {
+  background: var(--brand-dark);
+  color: #fff;
+}
+
 .particle {
   position: absolute;
   width: 5px;
@@ -638,6 +671,8 @@ p {
   box-shadow: 0 0 10px var(--particle-color, var(--particle-cyan));
   animation: moveParticle var(--particle-duration, 15s) linear infinite;
 }
+
+
 
 @media (max-width: 900px) {
   .section {

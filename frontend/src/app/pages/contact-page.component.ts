@@ -24,6 +24,7 @@ import { environment } from '../../environments/environment';
               <div>
                 <h4>Email</h4>
                 <p>Pour toute demande, n'hésitez pas à m'envoyer un email</p>
+                <a class="contact-link" href="mailto:tesnim.benama@limayrac.fr">tesnim.benama@limayrac.fr</a>
               </div>
             </div>
             <div class="info-item">
@@ -38,6 +39,13 @@ import { environment } from '../../environments/environment';
               <div>
                 <h4>Ouvert à l'échange</h4>
                 <p>Collaborations, projets, conseils... Je suis intéressé !</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">👜</span>
+              <div>
+                <h4>Statut</h4>
+                <p>En recherche d'alternance</p>
               </div>
             </div>
           </div>
@@ -89,14 +97,14 @@ import { environment } from '../../environments/environment';
             <span class="btn-text">{{ loading ? 'Envoi en cours...' : 'Envoyer mon message' }}</span>
           </button>
 
-          <div class="status-message" *ngIf="success" [@fadeInOut]>
+          <div class="status-message" *ngIf="success">
             <span class="status-icon">✓</span>
             <div>
               <strong>Message envoyé avec succès !</strong>
               <p>Merci pour votre message. Je vous répondrai dès que possible.</p>
             </div>
           </div>
-          <div class="status-message error" *ngIf="error" [@fadeInOut]>
+          <div class="status-message error" *ngIf="error">
             <span class="status-icon">⚠️</span>
             <div>
               <strong>Une erreur est survenue</strong>
