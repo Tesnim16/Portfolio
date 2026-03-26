@@ -7,10 +7,6 @@ import { veilleData } from '../data/portfolio.data';
   standalone: true,
   imports: [NgFor],
   template: `
-    <section class="section hero">
-      <h1>{{ data.title }}</h1>
-      <p>{{ data.subtitle }}</p>
-    </section>
 
     <section class="section panel">
       <h1>{{ data.introTitle }}</h1>

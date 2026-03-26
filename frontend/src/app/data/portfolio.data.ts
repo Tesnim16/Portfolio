@@ -146,19 +146,13 @@ export const veilleData = {
       title: 'X (anciennement Twitter)',
       type: 'Outil de veille',
       text: "X (anciennement Twitter) est un réseau social, où les gens communiquent de nombreuses informations comme des trends, des actualités journalières et même de nouvelles technologies comme les nouvelles technologies qu'Elon Musk publie.",
-      link: 'https://feedly.com/'
+      link: 'https://x.com/'
     },
     {
       title: 'LinkedIn',
       type: 'Outil de Veille/Recherche',
       text: "LinkedIn est une réseau social pour professionnel, il permet aux autres de s'informer sur les nouvelles alertes d'emploi, nouvelles technologies et les nouvelles actualités au sein d'entreprise et autres.",
-      link: 'https://www.inoreader.com/'
-    },
-    {
-      title: 'Google Alerts',
-      type: 'Outil de veille par alertes',
-      text: "Google Alerts est un service gratuit de Google qui permet de recevoir des notifications par email lorsqu'un nouveau contenu correspondant à des mots-clés spécifiques est publié en ligne. C'est un outil simple mais efficace pour rester informé des dernières actualités et tendances dans un domaine particulier.",
-      link: 'https://www.google.com/alerts'
+      link: 'https://www.linkedin.com/'
     }
   ]
 };

@@ -10,32 +10,108 @@ import { environment } from '../../environments/environment';
   imports: [NgIf, ReactiveFormsModule],
   template: `
     <section class="section hero">
-      <h1>Contact</h1>
-      <p>Vous avez une question/opportunité ? Envoyez-moi un message !</p>
+      <h1>Restons en contact</h1>
+      <p>Une question, une opportunité ou une suggestion ? Je serais ravi de vous entendre. Envoyez-moi un message et je vous répondrai dans les meilleurs délais.</p>
     </section>
 
     <section class="section panel contact-panel">
-      <h1>Me contacter</h1>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <h2>Communiquer avec moi</h2>
+          <div class="info-items">
+            <div class="info-item">
+              <span class="info-icon">✉️</span>
+              <div>
+                <h4>Email</h4>
+                <p>Pour toute demande, n'hésitez pas à m'envoyer un email</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">⚡</span>
+              <div>
+                <h4>Réponse rapide</h4>
+                <p>Je réponds généralement en 24-48 heures</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="info-icon">🤝</span>
+              <div>
+                <h4>Ouvert à l'échange</h4>
+                <p>Collaborations, projets, conseils... Je suis intéressé !</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submit()">
-        <label for="name">Nom</label>
-        <input id="name" formControlName="name" type="text" required />
+        <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="submit()">
+          <div class="form-group">
+            <label for="name">Votre nom</label>
+            <input 
+              id="name" 
+              formControlName="name" 
+              type="text" 
+              placeholder="Jean Dupont"
+              required />
+            <span class="error" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+              Le nom est requis
+            </span>
+          </div>
 
-        <label for="email">Email</label>
-        <input id="email" formControlName="email" type="email" required />
+          <div class="form-group">
+            <label for="email">Votre email</label>
+            <input 
+              id="email" 
+              formControlName="email" 
+              type="email" 
+              placeholder="jean.dupont@exemple.com"
+              required />
+            <span class="error" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+              {{ contactForm.get('email')?.errors?.['required'] ? "L'email est requis" : "Format d'email invalide" }}
+            </span>
+          </div>
 
-        <label for="message">Message</label>
-        <textarea id="message" formControlName="message" rows="6" required></textarea>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea 
+              id="message" 
+              formControlName="message" 
+              rows="5"
+              placeholder="Decrivez votre question ou proposition..."
+              required></textarea>
+            <span class="error" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+              Le message est requis
+            </span>
+            <span class="char-count">{{ contactForm.get('message')?.value?.length || 0 }}/1000</span>
+          </div>
 
-        <button type="submit" [disabled]="loading || contactForm.invalid">
-          {{ loading ? 'Envoi...' : 'Envoyer' }}
-        </button>
+          <button type="submit" class="submit-btn" [disabled]="loading || contactForm.invalid">
+            <span class="btn-icon">{{ loading ? '...' : '✓' }}</span>
+            <span class="btn-text">{{ loading ? 'Envoi en cours...' : 'Envoyer mon message' }}</span>
+          </button>
 
-        <p *ngIf="success" class="status success">Merci pour votre message ! Je vous répondrai dès que possible.</p>
-        <p *ngIf="error" class="status error">Une erreur est survenue. Vérifiez le backend et la connexion MySQL.</p>
-      </form>
+          <div class="status-message" *ngIf="success" [@fadeInOut]>
+            <span class="status-icon">✓</span>
+            <div>
+              <strong>Message envoyé avec succès !</strong>
+              <p>Merci pour votre message. Je vous répondrai dès que possible.</p>
+            </div>
+          </div>
+          <div class="status-message error" *ngIf="error" [@fadeInOut]>
+            <span class="status-icon">⚠️</span>
+            <div>
+              <strong>Une erreur est survenue</strong>
+              <p>Veuillez vérifier votre connexion et réessayer.</p>
+            </div>
+          </div>
+        </form>
+      </div>
     </section>
-  `
+  `,
+  styles: [`
+    :host ::ng-deep .contact-panel {
+      padding: 60px 28px !important;
+    }
+  `]
 })
 export class ContactPageComponent {
   private readonly fb = inject(FormBuilder);

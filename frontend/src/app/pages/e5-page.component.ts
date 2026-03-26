@@ -5,10 +5,6 @@ import { e5Data } from '../data/portfolio.data';
   selector: 'app-e5-page',
   standalone: true,
   template: `
-    <section class="section hero">
-      <h1>{{ data.title }}</h1>
-      <p>{{ data.subtitle }}</p>
-    </section>
 
     <section class="section panel">
       <h1>Tableau de synthèse des compétences</h1>
