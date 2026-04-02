@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack portfolio application",
+  "scripts": {
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "build:backend": "echo ✓ Backend ready (no build needed)",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:frontend && npm run build:backend",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd .."
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
