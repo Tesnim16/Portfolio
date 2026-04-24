@@ -18,13 +18,8 @@ import { homeData } from '../data/portfolio.data';
       <div class="card-container">
         <article class="card" *ngFor="let option of data.options">
           <div class="card-inner">
-            <div class="card-front">
-              <h3>{{ option.title }}</h3>
-            </div>
-            <div class="card-back">
-              <h3>{{ option.title }}</h3>
-              <p>{{ option.text }}</p>
-            </div>
+            <h3>{{ option.title }}</h3>
+            <p>{{ option.text }}</p>
           </div>
         </article>
       </div>

@@ -16,16 +16,10 @@ import { projectsData } from '../data/portfolio.data';
       <div class="project-grid">
         <article class="project-item" *ngFor="let card of data.cards">
           <div class="project-card">
-            <div class="card-front">
-              <h3>{{ card.title }}</h3>
-              <p>{{ card.stack }}</p>
-            </div>
-            <div class="card-back">
-              <h3>{{ card.title }}</h3>
-              <p><strong>Technologies :</strong> {{ card.stack }}</p>
-              <p>{{ card.text }}</p>
-              <a [href]="card.link" target="_blank" rel="noreferrer">Voir le projet</a>
-            </div>
+            <h3>{{ card.title }}</h3>
+            <p><strong>Technologies :</strong> {{ card.stack }}</p>
+            <p>{{ card.text }}</p>
+            <a [href]="card.link" target="_blank" rel="noreferrer">Voir le projet</a>
           </div>
         </article>
       </div>
