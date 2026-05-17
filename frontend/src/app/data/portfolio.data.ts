@@ -123,6 +123,7 @@ export const competencese5Data = {
   skills: [
     { label: 'Gérer le patrimoine informatique', icon: 'assets/img/GérerLePatrimoineInformatique.png' },
     { label: 'Répondre aux incidents et aux demandes d\'assistance et d\'évolution', icon: 'assets/img/Incidents.png' },
+    { label: 'Développer la présence en ligne de l\'organisation', icon: 'assets/img/DévelopperLaPrésenceEnLigne.png' },
     { label: 'Travailler en mode projet', icon: 'assets/img/TravaillerEnModeProjet.png' },
     { label: 'Mettre à disposition des utilisateurs un service informatique', icon: 'assets/img/MettreADispositionUnService.png' },
     { label: 'Organiser son développement professionnel', icon: 'assets/img/OrganiserSonDéveloppementPersonnelPortfolio.png' }
