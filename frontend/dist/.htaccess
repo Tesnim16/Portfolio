@@ -10,15 +10,6 @@
   RewriteRule ^.*$ index.html [L]
 </IfModule>
 
-# Disable cache for index.html and force browser to check for updates
-<FilesMatch "^index\.html$">
-  <IfModule mod_headers.c>
-    Header set Cache-Control "no-cache, no-store, must-revalidate"
-    Header set Pragma "no-cache"
-    Header set Expires "0"
-  </IfModule>
-</FilesMatch>
-
 # Compression (if not already enabled)
 <IfModule mod_gzip.c>
   mod_gzip_on Yes

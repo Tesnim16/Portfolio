@@ -41,10 +41,10 @@ export const presentationData = {
   subtitle: 'A propos de moi (Parcours scolaire et professionnel)',
   timeline: [
     { years: '2024 - 2026', text: 'BTS SIO - Institut Limayrac', side: 'left' as const },
-    { years: '2020 - 2024', text: 'Baccalauréat ST2S - Lycée Rive Gauche', side: 'left' as const },
-    { years: '2015 - 2019', text: 'Collège - Collège Jean Jaurès', side: 'left' as const },
     { years: '2026 - 2026 (2 mois)', text: "Stage - LAKN SERVICE / Développement d'application", side: 'right' as const},
-    { years: '2025 - 2025 (2 mois)', text: "Stage - Limayrac / Développement d'application", side: 'right' as const }
+    { years: '2020 - 2024', text: 'Baccalauréat ST2S - Lycée Rive Gauche', side: 'left' as const },
+    { years: '2025 - 2025 (2 mois)', text: "Stage - Limayrac / Développement d'application", side: 'right' as const },
+    { years: '2015 - 2019', text: 'Collège - Collège Jean Jaurès', side: 'left' as const },
   ],
   cvText:
     "Vous trouverez ci-dessous un aperçu de mon parcours scolaire et professionnel. Pour plus de détails, n'hésitez pas à consulter mon CV.",
@@ -66,7 +66,7 @@ export const projectsData = {
       title: 'APPRESTO',
       stack: 'HTML, CSS, JavaScript, PHP, MySQL, Java',
       text: 'Application web réalisée pour la gestion d\'un restaurant. (Pour un projet de groupe)',
-      link: 'https://github.com/Tesnim16/appresto'
+      link: 'https://github.com/dodo-dt/AP-SLAM-SIO2'
     },
     {
       title: 'BOT PROJET',
@@ -121,12 +121,11 @@ export const competencese5Data = {
   text:
     "Au cours de ma formation en BTS SIO option SLAM, j'ai acquis diverses compétences techniques et professionnelles. Voici un aperçu des principales compétences que j'ai développées pour le bloc 1 :",
   skills: [
-    { label: 'Gérer le patrimoine informatique' },
-    { label: 'Répondre aux incidents et aux demandes d\'assistance et d\'évolution' },
-    { label: 'Développer la présence en ligne de l\'organisation' },
-    { label: 'Travailler en mode projet', icon: 'assets/img/maintenance.png' },
-    { label: 'Mettre à disposition des utilisateurs un service informatique'},
-    { label: 'Organiser son développement professionnel' }
+    { label: 'Gérer le patrimoine informatique', icon: 'assets/img/GérerLePatrimoineInformatique.png' },
+    { label: 'Répondre aux incidents et aux demandes d\'assistance et d\'évolution', icon: 'assets/img/Incidents.png' },
+    { label: 'Travailler en mode projet', icon: 'assets/img/TravaillerEnModeProjet.png' },
+    { label: 'Mettre à disposition des utilisateurs un service informatique', icon: 'assets/img/MettreADispositionUnService.png' },
+    { label: 'Organiser son développement professionnel', icon: 'assets/img/OrganiserSonDéveloppementPersonnelPortfolio.png' }
   ]
 }
 

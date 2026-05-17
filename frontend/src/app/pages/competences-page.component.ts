@@ -25,6 +25,7 @@ import { competencese5Data } from '../data/portfolio.data';
       <p>{{ competencese5Data.text }}</p>
       <div class="competences-grid">
         <article class="e5-card" *ngFor="let skill of competencese5Data.skills">
+          <img *ngIf="skill.icon" [src]="skill.icon" [alt]="skill.label" class="competence-icon" />
           <h3>{{ skill.label }}</h3>
         </article>
       </div>
