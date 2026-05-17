@@ -22,16 +22,6 @@ import { presentationData } from '../data/portfolio.data';
       </div>
     </section>
 
-  <section class="section panel parcours">
-    <div class="timeline">
-      <article class="timeline-item" *ngFor="let item of data.timelinestage" [class.left]="item.side === 'left'" [class.right]="item.side === 'right'">
-        <span class="timeline-dot"></span>
-        <h3>{{ item.years }}</h3>
-        <p>{{ item.text }}</p>
-      </article>
-    </div>
-  </section>
-
     <section class="section panel">
       <h1>Mon CV</h1>
       <p>{{ data.cvText }}</p>
