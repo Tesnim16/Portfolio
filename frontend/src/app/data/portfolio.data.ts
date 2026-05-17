@@ -42,8 +42,8 @@ export const presentationData = {
   timeline: [
     { years: '2024 - 2026', text: 'BTS SIO - Institut Limayrac', side: 'left' as const },
     { years: '2026 - 2026 (2 mois)', text: "Stage - LAKN SERVICE / Développement d'application", side: 'right' as const},
-    { years: '2020 - 2024', text: 'Baccalauréat ST2S - Lycée Rive Gauche', side: 'left' as const },
     { years: '2025 - 2025 (2 mois)', text: "Stage - Limayrac / Développement d'application", side: 'right' as const },
+    { years: '2020 - 2024', text: 'Baccalauréat ST2S - Lycée Rive Gauche', side: 'left' as const },
     { years: '2015 - 2019', text: 'Collège - Collège Jean Jaurès', side: 'left' as const },
   ],
   cvText:
