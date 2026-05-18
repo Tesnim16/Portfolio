@@ -138,12 +138,6 @@ export const veilleData = {
     "La veille technologique est un processus continu de surveillance et d'analyse des évolutions technologiques, des tendances du marché et des innovations dans un domaine spécifique. Elle permet aux entreprises et aux professionnels de rester informés des nouveautés, d'anticiper les changements et de prendre des décisions éclairées pour leur développement stratégique.",
   tools: [
     {
-      title: 'X (anciennement Twitter)',
-      type: 'Outil de veille',
-      text: "X (anciennement Twitter) est un réseau social, où les gens communiquent de nombreuses informations comme des trends, des actualités journalières et même de nouvelles technologies comme les nouvelles technologies qu'Elon Musk publie.",
-      link: 'https://x.com/'
-    },
-    {
       title: 'LinkedIn',
       type: 'Outil de Veille/Recherche',
       text: "LinkedIn est une réseau social pour professionnel, il permet aux autres de s'informer sur les nouvelles alertes d'emploi, nouvelles technologies et les nouvelles actualités au sein d'entreprise et autres.",
